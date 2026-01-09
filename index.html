@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creative Login UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LEFT : CHARACTERS -->
+  <div class="character-box">
+    <svg id="face" viewBox="0 0 200 200">
+      <!-- face -->
+      <circle cx="100" cy="100" r="80" fill="#FFD966"/>
+
+      <!-- eyes -->
+      <circle class="eye" id="eye-left" cx="70" cy="90" r="8"/>
+      <circle class="eye" id="eye-right" cx="130" cy="90" r="8"/>
+
+      <!-- mouth -->
+      <path d="M70 130 Q100 150 130 130" stroke="#000" stroke-width="4" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- RIGHT : LOGIN FORM -->
+  <div class="login-box">
+    <h2>Welcome back</h2>
+
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <button>Log in</button>
+
+    <p class="small-text">create account</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
