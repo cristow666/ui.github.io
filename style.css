@@ -1,69 +1,124 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  height: 100vh;
   margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #e9e9e9, #f7f7f7);
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #f3f3f3;
+  justify-content: center;
 }
 
+/* MAIN CONTAINER */
 .container {
   display: flex;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 650px;
+  height: 360px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
+/* LEFT : CHARACTER */
 .character-box {
-  width: 300px;
+  flex: 1;
+  background: #f1f1f1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #eee;
+  justify-content: center;
 }
 
+/* SVG FACE */
+#face {
+  width: 220px;
+  height: 220px;
+}
+
+/* EYES (IMPORTANT FOR ANIMATION) */
+.eye {
+  transition: transform 0.15s ease-out;
+  transform-origin: center;
+}
+
+/* RIGHT : LOGIN */
 .login-box {
-  padding: 40px;
-  width: 300px;
+  flex: 1;
+  padding: 40px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .login-box h2 {
-  margin-bottom: 20px;
+  margin: 0 0 25px 0;
+  font-size: 22px;
+  color: #222;
 }
 
+/* INPUTS */
 .login-box input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border-radius: 8px;
   border: 1px solid #ccc;
   outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+.login-box input:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* BUTTON */
 .login-box button {
-  width: 100%;
+  margin-top: 10px;
   padding: 12px;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
   background: #111;
-  color: white;
+  color: #fff;
+  font-size: 15px;
   cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
 }
 
+.login-box button:hover {
+  background: #000;
+}
+
+.login-box button:active {
+  transform: scale(0.98);
+}
+
+/* SMALL CREATE ACCOUNT TEXT */
 .small-text {
-  margin-top: 15px;
+  margin-top: 18px;
   font-size: 12px;
+  color: #777;
   text-align: center;
-  color: #666;
   cursor: pointer;
 }
 
-.eye {
-  transition: transform 0.1s ease;
+.small-text:hover {
+  text-decoration: underline;
 }
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .character-box {
+    padding: 20px 0;
+  }
+  }
