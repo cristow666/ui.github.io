@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Creative Login UI</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <!-- LEFT : CHARACTERS -->
+  <!-- LEFT SIDE : ANIMATED CHARACTER -->
   <div class="character-box">
-    <svg id="face" viewBox="0 0 200 200">
+
+    <!-- ===== SVG START ===== -->
+    <svg id="face" viewBox="0 0 200 200" width="200">
       <!-- face -->
       <circle cx="100" cy="100" r="80" fill="#FFD966"/>
 
-      <!-- eyes -->
-      <circle class="eye" id="eye-left" cx="70" cy="90" r="8"/>
-      <circle class="eye" id="eye-right" cx="130" cy="90" r="8"/>
+      <!-- eye white -->
+      <circle cx="70" cy="90" r="14" fill="#fff"/>
+      <circle cx="130" cy="90" r="14" fill="#fff"/>
+
+      <!-- pupils (ANIMATED PART) -->
+      <circle class="eye" cx="70" cy="90" r="6" fill="#000"/>
+      <circle class="eye" cx="130" cy="90" r="6" fill="#000"/>
 
       <!-- mouth -->
-      <path d="M70 130 Q100 150 130 130" stroke="#000" stroke-width="4" fill="none"/>
+      <path d="M65 135 Q100 155 135 135"
+            stroke="#000" stroke-width="4" fill="none"/>
     </svg>
+    <!-- ===== SVG END ===== -->
+
   </div>
 
-  <!-- RIGHT : LOGIN FORM -->
+  <!-- RIGHT SIDE : LOGIN FORM -->
   <div class="login-box">
     <h2>Welcome back</h2>
 
-    <input type="email" id="email" placeholder="Email" />
-    <input type="password" id="password" placeholder="Password" />
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
 
     <button>Log in</button>
 
